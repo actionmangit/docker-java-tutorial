@@ -10,4 +10,4 @@ RUN ./mvnw dependency:go-offline
 COPY src ./src
 
 RUN ./mvnw spring-javaformat:apply
-CMD ["./mvnw", "spring-boot:run"]
+CMD ["./mvnw", "spring-boot:run", "-Dspring-boot.run.profiles=mysql"]
